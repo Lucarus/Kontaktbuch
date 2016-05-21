@@ -2,12 +2,9 @@ package Kontaktbuch.Fenster;
 
 import Kontaktbuch.Kontakt_Klassen.*;
 
-/**
- * Created by hanut on 21.05.2016.
- */
 public class KonsolenFenster_Test {
 
-    static Kontakt Lukas = new Kontakt();
+    private static Kontakt Lukas = new Kontakt();
 
     public static void main(String[] args) {
         Lukas.setAlter(17);
@@ -17,6 +14,22 @@ public class KonsolenFenster_Test {
         Lukas.setBeschreibung("Ein sehr netter Mensch");
 
         Adresse anschrift = Lukas.addAdresse();
+        {
+            anschrift.setStrase("Berlinerweg 33s");
+            anschrift.setPostleitzahl("2348");
+            anschrift.setLand("Deutschland");
+            anschrift.setStadt("Berlin");
+        }
+
+        anschrift = Lukas.addAdresse();
+        {
+            anschrift.setStrase("Berlinerweg 33s");
+            anschrift.setPostleitzahl("2348");
+            anschrift.setLand("Deutschland");
+            anschrift.setStadt("Berlin");
+        }
+
+        anschrift = Lukas.addAdresse();
         {
             anschrift.setStrase("Berlinerweg 33s");
             anschrift.setPostleitzahl("2348");
@@ -37,7 +50,7 @@ public class KonsolenFenster_Test {
         showKontaktInfo(Lukas);
     }
 
-    public static void showKontaktInfo(Kontakt kontakt) {
+    private static void showKontaktInfo(Kontakt kontakt) {
 
         String tempString;
 
