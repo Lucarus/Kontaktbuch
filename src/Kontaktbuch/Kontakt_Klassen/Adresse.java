@@ -5,6 +5,7 @@ package Kontaktbuch.Kontakt_Klassen;
  */
 public class Adresse {
 
+    String name;
     String strase;
     String postleitzahl;
     String stadt;
@@ -12,22 +13,25 @@ public class Adresse {
 
     Adresse() {}
 
-    Adresse(String strase, String stadt, String postleitzahl, String land) {
+    Adresse(String name, String strase, String stadt, String postleitzahl, String land) {
         this.strase = strase;
         this.postleitzahl = postleitzahl;
         this.stadt = stadt;
         this.land = land;
+        this.name = name;
     }
 
-    Adresse(String strase, String stadt, String land) {
+    Adresse(String name, String strase, String stadt, String land) {
         this.strase = strase;
         this.stadt = stadt;
         this.land = land;
+        this.name = name;
     }
 
-    Adresse(String strase, String stadt) {
+    Adresse(String name, String strase, String stadt) {
         this.strase = strase;
         this.stadt = stadt;
+        this.name = name;
     }
 
     // getter - setter
@@ -48,6 +52,10 @@ public class Adresse {
         this.strase = strase;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getLand() {
         return land;
     }
@@ -62,5 +70,9 @@ public class Adresse {
 
     public String getStrase() {
         return strase;
+    }
+
+    public String getName() {
+        return name;
     }
 }
