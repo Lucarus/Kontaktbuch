@@ -15,6 +15,7 @@ public class KonsolenFenster_Test {
 
         Adresse anschrift = Lukas.addAdresse();
         {
+            anschrift.setName("Zuhause");
             anschrift.setStrase("Berlinerweg 33s");
             anschrift.setPostleitzahl("2348");
             anschrift.setLand("Deutschland");
@@ -23,6 +24,7 @@ public class KonsolenFenster_Test {
 
         anschrift = Lukas.addAdresse();
         {
+            anschrift.setName("Arbeit");
             anschrift.setStrase("Berlinerweg 33s");
             anschrift.setPostleitzahl("2348");
             anschrift.setLand("Deutschland");
@@ -31,6 +33,7 @@ public class KonsolenFenster_Test {
 
         anschrift = Lukas.addAdresse();
         {
+            anschrift.setName("Vermietete Wohnung");
             anschrift.setStrase("Berlinerweg 33s");
             anschrift.setPostleitzahl("2348");
             anschrift.setLand("Deutschland");
@@ -93,8 +96,5 @@ public class KonsolenFenster_Test {
             if((tempString = account.getAccountWebsite()) != null) System.out.print(tempString + "\t");
             if((tempString = account.getAccountUserName()) != null) System.out.println(tempString);
         }
-
     }
-
-
 }
