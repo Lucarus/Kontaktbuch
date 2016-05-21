@@ -2,9 +2,6 @@ package Kontaktbuch.Kontakt_Klassen;
 
 import java.util.ArrayList;
 
-/**
- * Created by hanut on 21.05.2016.
- */
 public class Kontakt {
 
     // Kontakt Variablen
@@ -15,10 +12,10 @@ public class Kontakt {
     String beschreibung;
 
     //Listen für andere Dinge
-    ArrayList<Email> emails = new ArrayList<Email>();
-    ArrayList<Telefon> telefons = new ArrayList<Telefon>();
-    ArrayList<Account> accounts = new ArrayList<Account>();
-    ArrayList<Adresse> adressen = new ArrayList<Adresse>();
+    ArrayList<Email> emails = new ArrayList<>();
+    ArrayList<Telefon> telefons = new ArrayList<>();
+    ArrayList<Account> accounts = new ArrayList<>();
+    ArrayList<Adresse> adressen = new ArrayList<>();
 
     // leerer Konstruktor (ist einfacher später)
     public Kontakt() {}
