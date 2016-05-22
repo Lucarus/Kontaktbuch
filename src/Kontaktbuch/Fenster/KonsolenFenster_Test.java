@@ -51,6 +51,8 @@ public class KonsolenFenster_Test {
         Lukas.addAccount("Twitter", "Lukas St");
 
         showKontaktInfo(Lukas);
+
+        Kontaktbuch_Fenster myWindow = new Kontaktbuch_Fenster();
     }
 
     private static void showKontaktInfo(Kontakt kontakt) {
