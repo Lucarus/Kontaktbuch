@@ -2,11 +2,49 @@ package Kontaktbuch.Fenster;
 
 import Kontaktbuch.Kontakt_Klassen.*;
 
+import java.util.ArrayList;
+
 public class KonsolenFenster_Test {
 
-    private static Kontakt Lukas = new Kontakt();
-
     public static void main(String[] args) {
+
+        ArrayList<Kontakt> kontakts = new ArrayList<>();
+
+        Kontakt Lukas = new Kontakt();
+        Kontakt Peter = new Kontakt();
+
+
+        Peter.setNickname("Peti<3");
+        Peter.setAlter(19);
+        Peter.setNachname("Meter");
+        Peter.setVorname("Peter");
+        Peter.setBeschreibung("Echt netter Kerl");
+
+        Adresse peterAnschrift = Peter.addAdresse();
+        {
+            peterAnschrift.setName("Zuhause");
+            peterAnschrift.setStrase("Petersweg 7a");
+            peterAnschrift.setPostleitzahl("06342");
+            peterAnschrift.setLand("Russland");
+        }
+
+        peterAnschrift = Peter.addAdresse();
+        {
+            peterAnschrift.setName("Wohnung De");
+            peterAnschrift.setStrase("Hauptstraße 1b");
+            peterAnschrift.setPostleitzahl("93342");
+            peterAnschrift.setLand("Deutschland");
+        }
+
+        Peter.addTelefon("Zuhause", "0842934872");
+        Peter.addAccount("LinkedIn", "Peter Meter");
+        Peter.addEmail("Arbeit", "ichbinPeter@arbeit.de");
+        Peter.addEmail("Bestimmt", "emailAdresse@email.ru");
+
+        // zu liste
+        kontakts.add(Peter);
+
+
         Lukas.setAlter(17);
         Lukas.setNickname("Lucarus");
         Lukas.setVorname("Lukas");
@@ -26,19 +64,23 @@ public class KonsolenFenster_Test {
         {
             anschrift.setName("Arbeit");
             anschrift.setStrase("Berlinerweg 33s");
-            anschrift.setPostleitzahl("2348");
             anschrift.setLand("Deutschland");
-            anschrift.setStadt("Berlin");
         }
 
         anschrift = Lukas.addAdresse();
         {
             anschrift.setName("Vermietete Wohnung");
             anschrift.setStrase("Berlinerweg 33s");
-            anschrift.setPostleitzahl("2348");
             anschrift.setLand("Deutschland");
             anschrift.setStadt("Berlin");
         }
+
+        anschrift = Lukas.addAdresse();
+        {
+            anschrift.setName("Kunde Mayer");
+            anschrift.setStadt("Berlin");
+        }
+
 
         Lukas.addEmail("Arbeit", "lukas.sturm@arbeit.de");
         Lukas.addEmail("Privat", "lukas@googlemail.de");
@@ -50,9 +92,10 @@ public class KonsolenFenster_Test {
         Lukas.addAccount("Instagramm", "lukas saturm");
         Lukas.addAccount("Twitter", "Lukas St");
 
-        showKontaktInfo(Lukas);
+        // zu liste
+        kontakts.add(Lukas);
 
-        Kontaktbuch_Fenster myWindow = new Kontaktbuch_Fenster();
+        Kontaktbuch_Fenster myWindow = new Kontaktbuch_Fenster(kontakts);
     }
 
     private static void showKontaktInfo(Kontakt kontakt) {
