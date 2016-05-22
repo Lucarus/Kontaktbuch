@@ -29,6 +29,15 @@ public class Kontakt {
         this.beschreibung = beschreibung;
     }
 
+    //alle zusatz infos wie Email Telefon Accounts zurückgeben
+    public int getAmmountEmailTelefonAccounts() {
+        int zahl = 0;
+        zahl += emails.size();
+        zahl += telefons.size();
+        zahl += accounts.size();
+        return zahl;
+    }
+
     // arraylist getter - setter
 
     //Email
